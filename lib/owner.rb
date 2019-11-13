@@ -23,7 +23,6 @@ class Owner
   end
   
   def buy_dog(dog_name)
-    p dog_name
     found_dog = Dog.all.find{|dog| dog.name == dog_name}
     if found_dog
       found_dog.owner = self
