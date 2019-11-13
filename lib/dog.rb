@@ -17,8 +17,8 @@ class Dog
   end 
   
   def self.all 
-    @@all_dogs
     p "all dogs is a #{@@all_dogs.class}"
+    @@all_dogs
   end
   # code goes here
 end
