@@ -53,6 +53,8 @@ class Owner
     @dogs = []
   end
   
+  def 
+  
   def self.all 
     @@owners
   end
