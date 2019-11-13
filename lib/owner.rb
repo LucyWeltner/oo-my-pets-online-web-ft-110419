@@ -32,6 +32,11 @@ class Owner
     end
   end
   
+  def walk_dog(dog_name)
+    walked_dog = @dogs.find{|dog| dog.name == dog_name}
+    walked_dog.mood = "happy"
+  end
+  
   def self.all 
     @@owners
   end
