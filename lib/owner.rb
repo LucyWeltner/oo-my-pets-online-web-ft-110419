@@ -14,6 +14,8 @@ class Owner
   end
   
   def buy_cat(cat_name)
+    puts cat_name 
+    puts Cat.all
     found_cat = Cat.all.find{|cat| cat.name == cat_name}
     found_cat.owner= self
   end
