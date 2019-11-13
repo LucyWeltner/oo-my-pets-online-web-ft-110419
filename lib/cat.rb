@@ -13,7 +13,9 @@ class Cat
   
   def owner=(owner)
     @owner = owner
-    @owner.cats << self
+    if owner
+     @owner.cats << self
+    end
   end
   
   def self.all 
