@@ -17,7 +17,8 @@ class Dog
   end 
   
   def self.all 
-    @@all_dogs 
+    @@all_dogs
+    p @@all_dogs.class
   end
   # code goes here
 end
