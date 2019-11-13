@@ -14,16 +14,13 @@ class Owner
   end
   
   def buy_cat(cat_name)
-    puts cat_name 
-    puts Cat.all
     found_cat = Cat.all.find{|cat| cat.name == cat_name}
     found_cat.owner= self
   end
   
   def buy_dog(dog_name)
-    puts dog_name
-    puts Dog.all
     found_dog = Dog.all.find{|dog| dog.name == dog_name}
+    p found_dog
     found_dog.owner = self
   end
   
