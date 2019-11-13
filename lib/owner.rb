@@ -15,7 +15,11 @@ class Owner
   
   def buy_cat(cat_name)
     found_cat = Cat.all.find{|cat| cat.name == cat_name}
-    found_cat.owner= self
+    if found_cat
+      found_cat.owner = self
+    else 
+      bought_cat = Cat.new(cat_name, self)
+    end
   end
   
   def buy_dog(dog_name)
@@ -23,6 +27,8 @@ class Owner
     found_dog = Dog.all.find{|dog| dog.name == dog_name}
     if found_dog
       found_dog.owner = self
+    else 
+      bought_dog = Dog.new(dog_name, self)
     end
   end
   
