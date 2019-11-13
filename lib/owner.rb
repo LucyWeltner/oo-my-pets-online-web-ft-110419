@@ -21,8 +21,9 @@ class Owner
   def buy_dog(dog_name)
     p dog_name
     found_dog = Dog.all.find{|dog| dog.name == dog_name}
-    p "found dog is a #{found_dog.class}"
-    found_dog.owner = self
+    if found_dog
+      found_dog.owner = self
+    end
   end
   
   def self.all 
